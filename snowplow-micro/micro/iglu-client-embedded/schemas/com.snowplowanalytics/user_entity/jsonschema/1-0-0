@@ -1,0 +1,22 @@
+{
+    "$schema": "http://iglucentral.com/schemas/com.snowplowanalytics.self-desc/schema/jsonschema/1-0-0#",
+    "description": "Schema for user entity",
+    "self": {
+        "vendor": "test.example",
+        "name": "user_entity",
+        "format": "jsonschema",
+        "version": "1-0-0"
+    },
+    "type": "object",
+    "properties": {
+        "username": {
+            "type": "string"
+        },
+        "session_length": {
+            "type": "number",
+            "minimum": 0
+        }
+    },
+    "required": ["username"],
+    "additionalProperties": false
+}

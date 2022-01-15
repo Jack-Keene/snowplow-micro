@@ -1,0 +1,28 @@
+{% extends 'includes/_layout.html' %}
+{% block body %}
+<div class="container">
+    <section class="py-5 text-center container">
+          <div class="col-lg-6 col-md-8 mx-auto">
+            <h1>Tutorials</h1>
+            <p class="lead text-muted">For all those career changes that you are hoping to make this year, you may want to become aware of new technologies.</p>
+          </div>
+      </section>
+
+      <div class="row mb-2">
+        {% for blog in blogs %}
+        <div class="col-md-6">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static justify-content-sm-center">
+              <h3 class="mb-0">{{ blog.title }}</h3>
+              <div class="mb-1 text-muted">{{ blog.published }}</div>
+              <p class="card-text mb-auto">{{ blog.content[:150] }}...</p>
+              <a href="{{url_for('article', id=blog._id)}}"><button type="button" class="btn btn-primary me-">Continue reading</button></a>
+            </div>
+          </div>
+          
+        </div>
+        {% endfor %}
+      </div>
+</div>
+
+{% endblock %}

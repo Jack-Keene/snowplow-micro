@@ -1,0 +1,29 @@
+{% extends 'includes/_layout.html' %}
+{% block body %}
+<body class="text-center">
+    <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+        <div class="col-md-10 mx-auto col-lg-5 p-4 p-md-5 border rounded-3 bg-light">
+            <h2 class="text-center">Login</h2>
+            <form method='POST' class="p-4">
+                <div class="form-floating mb-3">
+                    <input autofocus autocomplete='off' type="text" name="username" class="form-control"
+                        placeholder='Username'>
+                    <label for="floatingInput">Username</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input autocomplete='off' type="password" name="password" class="form-control"
+                        placeholder='Password'>
+                    <label for="floatingPassword">Password</label>
+                </div>
+                <button class="w-100 btn btn-lg btn-primary" type="submit">Login</button>
+                <hr>
+                <p>(There's no actual authentication here, and passwords are ignored)</p>
+            </form>
+        </div>
+    </div>
+    </div>
+</body>
+
+
+
+{% endblock %}

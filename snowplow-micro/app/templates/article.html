@@ -1,0 +1,30 @@
+{% extends 'includes/_layout.html' %}
+{% block body %}
+
+<div class="container">
+    <div class="row g-5">
+        <hr>
+        <div class="col-md-8">
+            <article class="blog-post">
+                <h2 class="blog-post-title">{{ blog.title }}</h2>
+                <p class="blog-post-meta">{{ blog.published }} by <a href="https://app.inferkit.com/demo">InferKit</a></p>
+                <p>{{ blog.content }}</p>
+            </article>
+        </div>
+    </div>
+    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <form method="POST">
+            <input type="hidden" name="_feedback" value="like">
+            <button class="btn btn-success btn-lg px-4" type="submit">
+                <i class="far fa-thumbs-up"></i>
+            </button>
+        </form>
+        <form method="POST">
+            <input type="hidden" name="_feedback" value="dislike">
+            <button class="btn btn-danger btn-lg px-4" type="submit">
+                <i class="far fa-thumbs-down"></i>
+            </button>
+        </form>        
+    </div>
+</div>
+{% endblock %}
