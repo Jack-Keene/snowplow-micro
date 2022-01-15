@@ -6,7 +6,7 @@ Tutorial.org is a web app written in Python using the Flask framework. It includ
 To launch the docker container run the below:
 ```cmd
 
-docker run 
+docker run \
   --mount type=bind,source=$(pwd)/micro,destination=/config \
   -p 9090:9090 \
   snowplow/snowplow-micro:latest \
