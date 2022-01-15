@@ -30,17 +30,17 @@ To run the flask application:
 
 Bash
 
-$ export FLASK_APP=app
+$ export FLASK_APP=app/app
 $ flask run
  
 CMD
  
-set FLASK_APP=app
+set FLASK_APP=app/app
 flask run
 
 Powershell
 
-$env:FLASK_APP = "app"
+$env:FLASK_APP = "app/app"
 flask run
 
 ```
