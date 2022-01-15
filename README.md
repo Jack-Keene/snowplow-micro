@@ -11,9 +11,9 @@ docker run \
   -p 9090:9090 \
   snowplow/snowplow-micro:latest \
   --collector-config /config/micro.conf \
-  --iglu /config/iglu.jsonfig/iglu.json
+  --iglu /config/iglu.json
   
-  ```
+```
   
 The collector endpoint will be http://localhost:9090.
 
