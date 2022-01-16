@@ -1,19 +1,33 @@
-# Tutorials.org - Snowplow Micro Demonstration
-Tutorial.org is a web app written in Python using the Flask framework. It includes user tracking through Snowplow Micro using the Python tracker. 
+# Tutorial.org - Snowplow Micro Demonstration
+Tutorial.org is a web app written in Python using the Flask framework. It includes user tracking through Snowplow Micro using the Python tracker to track a number of user events including:
+
+* Login events 
+* Page views  
+* Donation events
+* Feedback events (eg Like & Dislike)
+
+It uses context for some of these events including:
+* User information
+* Article information
 
 ## Running the application
 
 To launch the docker container run the below:
-```cmd
 
+
+Build Image
+``` cmd
 docker-compose build
+```
 
-<!-- Run Micro -->
+Run Micro
+``` cmd
 docker-compose up -d
+```
 
-<!-- Launch Flask App -->
+Launch Flask App
+``` cmd
 python app/app.py
-
 ```
   
 The collector endpoint will be http://localhost:9090.
