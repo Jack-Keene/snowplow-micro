@@ -13,7 +13,7 @@ services:
     container_name: flask
     build: ./app
     volumes:
-      - ./app
+      - ./app/:/code
     expose:
       - "5000"
     ports:
