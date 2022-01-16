@@ -91,7 +91,7 @@ def index():
 @app.route('/articles')
 @login_required
 def articles():
-    with open("../snowplow-micro/app/assets/blogs.json") as file:
+    with open("app/assets/blogs.json") as file:
         blogs = json.load(file)
 
     user_context = SelfDescribingJson(
@@ -106,7 +106,7 @@ def articles():
 
 @app.route('/article/<string:id>', methods= ["GET", "POST"])
 def article(id):
-    with open("../snowplow-micro/app/assets/blogs.json") as file:
+    with open("app/assets/blogs.json") as file:
         blogs = json.load(file)
 
     user_context = SelfDescribingJson(
