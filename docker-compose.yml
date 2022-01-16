@@ -1,0 +1,20 @@
+version: '3'
+services:
+  micro:
+    container_name: micro
+    image: snowplow/snowplow-micro:1.2.1
+    volumes:
+      - ./micro:/config
+    restart: always
+    ports:
+      - "9090:9090"
+    command: "--collector-config /config/micro.conf --iglu /config/iglu.json"
+  web:
+    container_name: flask
+    build: ./app
+    volumes:
+      - ./app
+    expose:
+      - "5000"
+    ports:
+    - "5000:5000"
