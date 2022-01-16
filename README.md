@@ -13,17 +13,21 @@ It uses context for some of these events including:
 ## Running the application
 
 To launch the docker container run the below:
-```html
+
 
 Build Image
+``` cmd
 docker-compose build
+```
 
 Run Micro
+``` cmd
 docker-compose up -d
+```
 
 Launch Flask App
+``` cmd
 python app/app.py
-
 ```
   
 The collector endpoint will be http://localhost:9090.
