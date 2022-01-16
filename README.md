@@ -15,12 +15,13 @@ It uses context for some of these events including:
 To launch the docker container run the below:
 ```html
 
+Build Image
 docker-compose build
 
-<!-- Run Micro -->
+Run Micro
 docker-compose up -d
 
-<!-- Launch Flask App -->
+Launch Flask App
 python app/app.py
 
 ```
