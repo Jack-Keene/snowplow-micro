@@ -13,7 +13,7 @@ It uses context for some of these events including:
 ## Running the application
 
 To launch the docker container run the below:
-```cmd
+```html
 
 docker-compose build
 
