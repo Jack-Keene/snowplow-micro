@@ -1,5 +1,14 @@
-# Tutorials.org - Snowplow Micro Demonstration
-Tutorial.org is a web app written in Python using the Flask framework. It includes user tracking through Snowplow Micro using the Python tracker. 
+# Tutorial.org - Snowplow Micro Demonstration
+Tutorial.org is a web app written in Python using the Flask framework. It includes user tracking through Snowplow Micro using the Python tracker to track a number of user events including:
+
+* Login events 
+* Page views  
+* Donation events
+* Feedback events (eg Like & Dislike)
+
+It uses context for some of these events including:
+* User information
+* Article information
 
 ## Running the application
 
